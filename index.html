@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Advanced HTML form">
+        <title>Form</title>
+        <style>
+            section{
+                border: solid 1px;
+            }
+            h1{
+                color: red;
+            }
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Contac me</h1>
+                <form action="#" method="post">
+
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" aria-describedby="yourName" required>
+                    <small id="yourName">Enter your full name.</small>
+
+                    <label for="tel">Phone: </label>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" title="This is not a phone number, please check the format entered." aria-describedby="yourPhone">
+                    <small id="yourPhone">Enter your phone number in the correct format.</small>
+
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="yourEmail">
+                    <small id="yourEmail">Enter your corporate email.</small>
+
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" aria-describedby="yourMessage"></textarea>
+                    <small id="yourMessage">Why are you contacting me?</small>
+
+                    <label for="sex">Sex: </label>
+                    <select name="sex" id="sex">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>Affair</legend>
+                        <label for="project">Project: </label>
+                        <input type="radio" value="project" id="project" name="affair">
+                        <label for="job">Job: </label>
+                        <input type="radio" value="job" id="job" name="affair">
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Nasdig, Practicando ando.</p>
+        </footer>
+        
+    </body>
+</html>
